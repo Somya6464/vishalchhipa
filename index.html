@@ -25,27 +25,29 @@
   <!-- JavaScript for initializing the Flutter app -->
   <script>
     // Injected during `flutter build`. Do not modify.
-    var serviceWorkerVersion = {flutter_service_worker_version};
+    var serviceWorkerVersion = { flutter_service_worker_version };
   </script>
   <script src="flutter.js" defer></script>
 </head>
+
 <body>
   <!-- This script initializes and runs the Flutter application -->
   <script>
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
       _flutter.loader.loadEntrypoint({
         serviceWorker: {
           // Version of the service worker to ensure proper caching.
           serviceWorkerVersion: serviceWorkerVersion,
         }
-      }).then(function(engineInitializer) {
+      }).then(function (engineInitializer) {
         return engineInitializer.initializeEngine();
-      }).then(function(appRunner) {
+      }).then(function (appRunner) {
         return appRunner.runApp();
-      }).catch(function(err) {
+      }).catch(function (err) {
         console.error('Error initializing Flutter app:', err);
       });
     });
   </script>
 </body>
+
 </html>
